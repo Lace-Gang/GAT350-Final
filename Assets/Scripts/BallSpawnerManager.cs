@@ -51,18 +51,24 @@ public class BallSpawnerManager : MonoBehaviour
                         //BallSpawners[i].GetComponent<MeshRenderer>().SetMaterials();
 
                         GameObject ball = null;
+                        Vector3 newTransform = BallSpawners[i].GetComponent<Transform>().position;
+                        newTransform.x += 0.5f;
+                        newTransform.y -= 0.25f;
 
                         switch (ballType)
                         {
                             case BallType.Normal:
-                                ball = Instantiate(normalBall, BallSpawners[i].GetComponent<Transform>().position, BallSpawners[i].GetComponent<Transform>().rotation);
+                                //ball = Instantiate(normalBall, BallSpawners[i].GetComponent<Transform>().position, BallSpawners[i].GetComponent<Transform>().rotation);
+                                ball = Instantiate(normalBall, newTransform, BallSpawners[i].GetComponent<Transform>().rotation);
                                 break;
                             case BallType.Heavy:
-                                ball = Instantiate(heavyBall, BallSpawners[i].GetComponent<Transform>().position, BallSpawners[i].GetComponent<Transform>().rotation);
+                                //ball = Instantiate(heavyBall, BallSpawners[i].GetComponent<Transform>().position, BallSpawners[i].GetComponent<Transform>().rotation);
+                                ball = Instantiate(heavyBall, newTransform, BallSpawners[i].GetComponent<Transform>().rotation);
 
                                 break;
                             case BallType.Bouncy:
-                                ball = Instantiate(bouncyBall, BallSpawners[i].GetComponent<Transform>().position, BallSpawners[i].GetComponent<Transform>().rotation);
+                                //ball = Instantiate(bouncyBall, BallSpawners[i].GetComponent<Transform>().position, BallSpawners[i].GetComponent<Transform>().rotation);
+                                ball = Instantiate(bouncyBall, newTransform, BallSpawners[i].GetComponent<Transform>().rotation);
 
                                 break;
                             default:
