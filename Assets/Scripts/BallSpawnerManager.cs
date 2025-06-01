@@ -1,8 +1,24 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BallSpawnerManager : MonoBehaviour
 {
+    //ball enum
+    public enum BallType { Normal, Heavy, Bouncy }
+
     [SerializeField] GameObject[] BallSpawners;
+
+    [SerializeField] GameObject normalBall;
+    [SerializeField] GameObject heavyBall;
+    [SerializeField] GameObject bouncyBall;
+
+    [SerializeField] Material normalMaterial;
+    [SerializeField] Material heavyMaterial;
+    [SerializeField] Material bouncyMaterial;
+
+    public BallType ballType = BallType.Normal;
+    private List<GameObject> ballPool;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,7 +43,26 @@ public class BallSpawnerManager : MonoBehaviour
                 {
                     if(hit.rigidbody == BallSpawners[i].GetComponent<Rigidbody>())
                     {
-                        print("Clicked");
+                        //print("Clicked");
+                        //BallSpawners[i].GetComponent<BallSpawners>().OnClicked();
+                        //BallSpawners[i].GetComponent<MeshRenderer>().SetMaterials();
+
+                        GameObject ball = null;
+
+                        switch (ballType)
+                        {
+                            case BallType.Normal:
+                                ball = Instantiate(normalBall, BallSpawners[i].GetComponent<Transform>().position, BallSpawners[i].GetComponent<Transform>().rotation);
+                                break;
+                            case BallType.Heavy:
+                                break;
+                            case BallType.Bouncy:
+                                break;
+                            default:
+                                break;
+                        }
+
+
                     }
                 }
             }
