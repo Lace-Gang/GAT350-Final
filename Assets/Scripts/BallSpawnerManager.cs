@@ -24,7 +24,10 @@ public class BallSpawnerManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        foreach(GameObject ballSpawn in BallSpawners)
+        {
+            ballSpawn.GetComponent<MeshRenderer>().material = normalMaterial;
+        }
     }
 
     // Update is called once per frame
@@ -55,8 +58,12 @@ public class BallSpawnerManager : MonoBehaviour
                                 ball = Instantiate(normalBall, BallSpawners[i].GetComponent<Transform>().position, BallSpawners[i].GetComponent<Transform>().rotation);
                                 break;
                             case BallType.Heavy:
+                                ball = Instantiate(heavyBall, BallSpawners[i].GetComponent<Transform>().position, BallSpawners[i].GetComponent<Transform>().rotation);
+
                                 break;
                             case BallType.Bouncy:
+                                ball = Instantiate(bouncyBall, BallSpawners[i].GetComponent<Transform>().position, BallSpawners[i].GetComponent<Transform>().rotation);
+
                                 break;
                             default:
                                 break;
@@ -77,5 +84,35 @@ public class BallSpawnerManager : MonoBehaviour
                 //    Destroy(gameObject);
                 //}
         }
+    }
+
+
+    public void ChangeBallType(BallType type)
+    {
+        ballType = type;
+        switch (ballType)
+        {
+            case BallType.Normal:
+                foreach (GameObject ballSpawn in BallSpawners)
+                {              
+                    ballSpawn.GetComponent<MeshRenderer>().material = normalMaterial;
+                }
+                break;
+            case BallType.Heavy:
+                foreach (GameObject ballSpawn in BallSpawners)
+                {
+                    ballSpawn.GetComponent<MeshRenderer>().material = heavyMaterial;
+                }
+                break;
+            case BallType.Bouncy:
+                foreach (GameObject ballSpawn in BallSpawners)
+                {
+                    ballSpawn.GetComponent<MeshRenderer>().material = bouncyMaterial;
+                }
+                break;
+            default:
+                break;
+        }
+
     }
 }
