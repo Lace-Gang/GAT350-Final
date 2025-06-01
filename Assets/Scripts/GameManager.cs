@@ -3,12 +3,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] GameObject scoreZoneManager;
+
     //things to change
     [SerializeField] TMPro.TextMeshProUGUI scoreText;
     //[SerializeField] TMPro.TextMeshPro scoreText;
 
     //things to keep track of
     [SerializeField] IntData scoreData;
+    [SerializeField] BoolData endRound;
 
 
     int score;
@@ -24,13 +27,24 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(scoreData.Value != score)
+        if(endRound.Value)
         {
-            //print("Detected");
+            if(scoreData.Value != score)
+            {
+                //print("Detected");
 
-            score = scoreData.Value;
-            //change score text
-            scoreText.text = "Score: " + score;
+                score = scoreData.Value;
+                //change score text
+                scoreText.text = "Score: " + score;
+            }
+            //if not
+
+            //reset various game components
+            scoreZoneManager.GetComponent<ScoreZoneManager>().ResetThis();
+
+            //return endround to false
+            endRound.Value = false;
         }
+
     }
 }

@@ -2417,6 +2417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
+  EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 50
   isOn: 0
 --- !u!1001 &444004132
@@ -2651,6 +2652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
+  EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 30
   isOn: 0
 --- !u!4 &451328958 stripped
@@ -2856,6 +2858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
+  EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 0
   isOn: 0
 --- !u!114 &498150467
@@ -7276,6 +7279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
+  EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 20
   isOn: 0
 --- !u!1001 &1340439243
@@ -7900,6 +7904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
+  EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 0
   isOn: 0
 --- !u!1 &1524467530
@@ -8174,6 +8179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
+  EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 10
   isOn: 0
 --- !u!1 &1568631854
@@ -8240,8 +8246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e27f50430710774dbb10f77b71c59a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreZoneManager: {fileID: 2007091199}
   scoreText: {fileID: 626039845}
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
+  endRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
 --- !u!4 &1594199279
 Transform:
   m_ObjectHideFlags: 0
@@ -9347,6 +9355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
+  EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 30
   isOn: 0
 --- !u!4 &1878756207 stripped
@@ -10183,6 +10192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
+  EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 20
   isOn: 0
 --- !u!1 &2007091199
@@ -10214,6 +10224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58eb0f686126bce44b60a3a6db612fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreZones:
   - {fileID: 1857355195}
   - {fileID: 2088262765}
@@ -10598,6 +10609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
+  EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 10
   isOn: 0
 --- !u!4 &2092957879 stripped

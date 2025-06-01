@@ -3,6 +3,7 @@ using UnityEngine;
 public class ScoreTrigger : MonoBehaviour
 {
     [SerializeField] IntData scoreData;
+    [SerializeField] BoolData EndRound;
 
     [SerializeField] int scoreIncrease;
 
@@ -21,6 +22,7 @@ public class ScoreTrigger : MonoBehaviour
             {
                 if(isOn) scoreData.Value += scoreIncrease;
                 hasBall = false;
+                EndRound.Value = true;
                 //print("Detected");
             }
 

@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class ScoreZoneManager : MonoBehaviour
 {
+    [SerializeField] BoolData EndRound;
     [SerializeField] GameObject[] scoreZones;
 
+    
+    
     
 
 
