@@ -539,7 +539,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: eeff85d5a1e92ed4c83ba7082b9bbac7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -648,7 +648,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: eeff85d5a1e92ed4c83ba7082b9bbac7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -734,8 +734,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 172222980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -784,7 +784,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 8e3a2e89a0bee734497edb8820e86bf4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -892,7 +892,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: eeff85d5a1e92ed4c83ba7082b9bbac7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -932,7 +932,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2980198712722848491, guid: 2ef6e19b2d33e734ba2661d480510404, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.029
+      value: -0.763
       objectReference: {fileID: 0}
     - target: {fileID: 2980198712722848491, guid: 2ef6e19b2d33e734ba2661d480510404, type: 3}
       propertyPath: m_LocalPosition.y
@@ -974,6 +974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Normal Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 7230635945710908375, guid: 2ef6e19b2d33e734ba2661d480510404, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ae9e38abea250c84192a66a99060bff1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -997,7 +1001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6979682939102592054, guid: 79bc74a545d449c40836dc041cccb840, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.32556
+      value: -3.233
       objectReference: {fileID: 0}
     - target: {fileID: 6979682939102592054, guid: 79bc74a545d449c40836dc041cccb840, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1031,6 +1035,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Miniwall
       objectReference: {fileID: 0}
+    - target: {fileID: 8772242496726595295, guid: 79bc74a545d449c40836dc041cccb840, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eeff85d5a1e92ed4c83ba7082b9bbac7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
