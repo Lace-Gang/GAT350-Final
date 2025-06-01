@@ -6,8 +6,9 @@ public class ScoreTrigger : MonoBehaviour
 
     [SerializeField] int scoreIncrease;
 
-    GameObject ball = null;
     bool hasBall = false;
+    public bool isOn = false;
+
     float timer = 0;
 
     private void Update()
@@ -18,7 +19,7 @@ public class ScoreTrigger : MonoBehaviour
 
             if (timer > 2.0f)
             {
-                scoreData.Value += scoreIncrease;
+                if(isOn) scoreData.Value += scoreIncrease;
                 hasBall = false;
                 //print("Detected");
             }
@@ -30,8 +31,15 @@ public class ScoreTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Ball")
         {
-            ball = other.GetComponent<GameObject>();
             hasBall = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Ball")
+        {
+            hasBall = false;
         }
     }
 }
