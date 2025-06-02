@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject ballSpawnerManager;
 
     //things to change
+    [SerializeField] GameObject mainPanel;
+    [SerializeField] GameObject gameOverPanel;
     [SerializeField] TMPro.TextMeshProUGUI scoreText;
     [SerializeField] TMPro.TextMeshProUGUI roundsText;
     //[SerializeField] TMPro.TextMeshPro scoreText;
@@ -15,6 +17,8 @@ public class GameManager : MonoBehaviour
     //things to keep track of
     [SerializeField] IntData scoreData;
     [SerializeField] BoolData endRound;
+    [SerializeField] BoolData fullReset;
+
 
 
     int score;
@@ -33,6 +37,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (fullReset)
+        {
+            FullReset();
+            return;
+        }
+            
+
         if (score <= 0)
         {
             //
@@ -72,5 +83,29 @@ public class GameManager : MonoBehaviour
             endRound.Value = false;
         }
 
+    }
+
+
+    private void FullReset()
+    {
+        //reset score and number of rounds
+        score = 0;
+        scoreData.Value = 0;
+        rounds = 5;
+
+        //transition game pannels
+        gameOverPanel.SetActive(false);
+        mainPanel.SetActive(true);
+
+        //reset screen text
+        scoreText.text = "Score: " + score;
+        roundsText.text = "Rounds: " + rounds;
+
+        //reset all other game functionality managers
+        scoreZoneManager.GetComponent<ScoreZoneManager>().ResetThis();
+        ballSpawnerManager.GetComponent<BallSpawnerManager>().ResetThis();
+
+        //set full reset data to false
+        fullReset.Value = false;
     }
 }

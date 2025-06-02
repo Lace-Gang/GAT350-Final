@@ -3,6 +3,7 @@ using UnityEngine;
 public class UIScript : MonoBehaviour
 {
     [SerializeField] GameObject Spawner;
+    [SerializeField] BoolData fullReset;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,5 +30,11 @@ public class UIScript : MonoBehaviour
     public void OnBouncyClick()
     {
         Spawner.GetComponent<BallSpawnerManager>().ChangeBallType(BallSpawnerManager.BallType.Bouncy);
+    }
+
+    public void OnResetClick()
+    {
+        Spawner.GetComponent<BallSpawnerManager>().ChangeBallType(BallSpawnerManager.BallType.Normal);
+        fullReset.Value = true;
     }
 }
