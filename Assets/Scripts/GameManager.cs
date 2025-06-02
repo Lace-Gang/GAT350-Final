@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     //things to change
     [SerializeField] TMPro.TextMeshProUGUI scoreText;
+    [SerializeField] TMPro.TextMeshProUGUI roundsText;
     //[SerializeField] TMPro.TextMeshPro scoreText;
     [SerializeField] GameObject[] endZones;
 
@@ -17,29 +18,46 @@ public class GameManager : MonoBehaviour
 
 
     int score;
+    int rounds;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         score = 0;
+        rounds = 5;
         scoreData.Value = score;
         scoreText.text = "Score: " + score;
+        roundsText.text = "Rounds: " + rounds;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(endRound.Value)
+        if (score <= 0)
+        {
+            //
+        }
+        if (endRound.Value)
         {
             if(scoreData.Value != score)
             {
                 //print("Detected");
 
                 score = scoreData.Value;
+
+                //+1 rounds
+                rounds++;
+
                 //change score text
                 scoreText.text = "Score: " + score;
             }
-            //if not
+            else
+            {
+                //-1 rounds
+                rounds--;
+            }
+            //change rounds text
+            roundsText.text = "Rounds: " + rounds;
 
             //reset various game components
             scoreZoneManager.GetComponent<ScoreZoneManager>().ResetThis();
