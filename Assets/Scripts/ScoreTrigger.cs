@@ -10,7 +10,7 @@ public class ScoreTrigger : MonoBehaviour
     bool hasBall = false;
     public bool isOn = false;
 
-    float timer = 0;
+    public float timer = 0;
 
     private void Update()
     {
@@ -18,7 +18,7 @@ public class ScoreTrigger : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (timer > 2.0f)
+            if (timer > 2.5f)
             {
                 if(isOn) scoreData.Value += scoreIncrease;
                 hasBall = false;

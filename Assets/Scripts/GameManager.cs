@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject scoreZoneManager;
+    [SerializeField] GameObject ballSpawnerManager;
 
     //things to change
     [SerializeField] TMPro.TextMeshProUGUI scoreText;
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
 
             //reset various game components
             scoreZoneManager.GetComponent<ScoreZoneManager>().ResetThis();
+            ballSpawnerManager.GetComponent<BallSpawnerManager>().ResetThis();
 
             //return endround to false
             endRound.Value = false;

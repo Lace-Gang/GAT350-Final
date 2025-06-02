@@ -18,7 +18,9 @@ public class BallSpawnerManager : MonoBehaviour
     [SerializeField] Material bouncyMaterial;
 
     public BallType ballType = BallType.Normal;
-    private List<GameObject> ballPool;
+    //private List<GameObject> ballPool;
+
+    private GameObject ball;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,9 +35,6 @@ public class BallSpawnerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
-        //print("hello 1");
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -46,11 +45,8 @@ public class BallSpawnerManager : MonoBehaviour
                 {
                     if(hit.rigidbody == BallSpawners[i].GetComponent<Rigidbody>())
                     {
-                        //print("Clicked");
-                        //BallSpawners[i].GetComponent<BallSpawners>().OnClicked();
-                        //BallSpawners[i].GetComponent<MeshRenderer>().SetMaterials();
 
-                        GameObject ball = null;
+                        //GameObject ball = null;
                         Vector3 newTransform = BallSpawners[i].GetComponent<Transform>().position;
                         newTransform.x += 0.5f;
                         newTransform.y -= 0.25f;
@@ -80,15 +76,6 @@ public class BallSpawnerManager : MonoBehaviour
                 }
             }
 
-            //hit.rigidbody
-
-
-                //if (hit.transform.position == transform.position)
-                //{
-                //    print("hello");
-                //    Instantiate(swappedInto, transform.position, transform.rotation);
-                //    Destroy(gameObject);
-                //}
         }
     }
 
@@ -120,5 +107,16 @@ public class BallSpawnerManager : MonoBehaviour
                 break;
         }
 
+    }
+
+
+    public void ResetThis()
+    {
+        //foreach (GameObject ball in ballPool)
+        //{
+        //    GameObject.Destroy(ball);
+        //}
+
+        GameObject.Destroy(ball);
     }
 }

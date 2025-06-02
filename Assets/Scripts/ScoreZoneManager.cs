@@ -33,6 +33,7 @@ public class ScoreZoneManager : MonoBehaviour
         {
             scoreZones[i].GetComponent<MeshRenderer>().enabled = false;
             scoreZones[i].GetComponent<ScoreTrigger>().isOn = false;
+            scoreZones[i].GetComponent<ScoreTrigger>().timer = 0.0f;
         }
     
         int random = Random.Range(0, scoreZones.Length);

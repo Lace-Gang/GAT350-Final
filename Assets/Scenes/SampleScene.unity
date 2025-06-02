@@ -12859,6 +12859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreZoneManager: {fileID: 2007091199}
+  ballSpawnerManager: {fileID: 1594145501}
   scoreText: {fileID: 626039845}
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
   endRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
