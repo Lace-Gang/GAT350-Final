@@ -4205,6 +4205,7 @@ MonoBehaviour:
   EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 50
   isOn: 0
+  timer: 0
 --- !u!1001 &444004132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4440,6 +4441,7 @@ MonoBehaviour:
   EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 30
   isOn: 0
+  timer: 0
 --- !u!4 &451328958 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4731613185598535207, guid: a083e69ed8899d14c8b91e50d7f2be49, type: 3}
@@ -4795,6 +4797,7 @@ MonoBehaviour:
   EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 0
   isOn: 0
+  timer: 0
 --- !u!114 &498150467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11359,6 +11362,7 @@ MonoBehaviour:
   EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 20
   isOn: 0
+  timer: 0
 --- !u!1001 &1340439243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12282,6 +12286,7 @@ MonoBehaviour:
   EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 0
   isOn: 0
+  timer: 0
 --- !u!1 &1524467530
 GameObject:
   m_ObjectHideFlags: 0
@@ -12557,6 +12562,7 @@ MonoBehaviour:
   EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 10
   isOn: 0
+  timer: 0
 --- !u!1 &1565986938
 GameObject:
   m_ObjectHideFlags: 0
@@ -12861,6 +12867,9 @@ MonoBehaviour:
   scoreZoneManager: {fileID: 2007091199}
   ballSpawnerManager: {fileID: 1594145501}
   scoreText: {fileID: 626039845}
+  endZones:
+  - {fileID: 498150461}
+  - {fileID: 1489659390}
   scoreData: {fileID: 11400000, guid: 0184f6969da265b449165073dfb53164, type: 2}
   endRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
 --- !u!4 &1594199279
@@ -15001,6 +15010,7 @@ MonoBehaviour:
   EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 30
   isOn: 0
+  timer: 0
 --- !u!4 &1878756207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6600296525450492846, guid: 0a12b509b29a3484eb9f76507f72c613, type: 3}
@@ -16560,6 +16570,7 @@ MonoBehaviour:
   EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 20
   isOn: 0
+  timer: 0
 --- !u!1 &2007091199
 GameObject:
   m_ObjectHideFlags: 0
@@ -16977,6 +16988,7 @@ MonoBehaviour:
   EndRound: {fileID: 11400000, guid: 5c1198325c11baa449d16e03cb706f75, type: 2}
   scoreIncrease: 10
   isOn: 0
+  timer: 0
 --- !u!4 &2092957879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6600296525450492846, guid: 0a12b509b29a3484eb9f76507f72c613, type: 3}

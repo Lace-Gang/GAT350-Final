@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     //things to change
     [SerializeField] TMPro.TextMeshProUGUI scoreText;
     //[SerializeField] TMPro.TextMeshPro scoreText;
+    [SerializeField] GameObject[] endZones;
 
     //things to keep track of
     [SerializeField] IntData scoreData;
@@ -43,6 +44,11 @@ public class GameManager : MonoBehaviour
             //reset various game components
             scoreZoneManager.GetComponent<ScoreZoneManager>().ResetThis();
             ballSpawnerManager.GetComponent<BallSpawnerManager>().ResetThis();
+
+            foreach(GameObject zone in endZones)
+            {
+                zone.GetComponent<ScoreTrigger>().timer = 0.0f;
+            }
 
             //return endround to false
             endRound.Value = false;
