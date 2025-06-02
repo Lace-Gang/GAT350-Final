@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject gameOverPanel;
     [SerializeField] TMPro.TextMeshProUGUI scoreText;
     [SerializeField] TMPro.TextMeshProUGUI roundsText;
+    [SerializeField] TMPro.TextMeshProUGUI finalScoreText;
     //[SerializeField] TMPro.TextMeshPro scoreText;
     [SerializeField] GameObject[] endZones;
 
@@ -44,10 +45,7 @@ public class GameManager : MonoBehaviour
         }
             
 
-        if (score <= 0)
-        {
-            //
-        }
+        
         if (endRound.Value)
         {
             if(scoreData.Value != score)
@@ -77,6 +75,13 @@ public class GameManager : MonoBehaviour
             foreach(GameObject zone in endZones)
             {
                 zone.GetComponent<ScoreTrigger>().timer = 0.0f;
+            }
+
+            if (rounds < 0)
+            {
+                mainPanel.SetActive(false);
+                gameOverPanel.SetActive(true);
+                finalScoreText.text = "Final Score: " + score;
             }
 
             //return endround to false

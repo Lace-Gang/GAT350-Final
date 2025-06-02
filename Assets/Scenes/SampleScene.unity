@@ -13489,6 +13489,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1605251525}
   scoreText: {fileID: 626039845}
   roundsText: {fileID: 888030048}
+  finalScoreText: {fileID: 1383015427}
   endZones:
   - {fileID: 498150461}
   - {fileID: 1489659390}
